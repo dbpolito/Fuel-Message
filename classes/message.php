@@ -29,6 +29,7 @@ class Message
 
 	/**
 	 * All Messages will be stored on runtime
+	 *
 	 * @var array
 	 */
 	protected static $data = array();
