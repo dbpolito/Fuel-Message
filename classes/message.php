@@ -2,7 +2,7 @@
 
 namespace Message;
 /**
- * Gets all ACL permission in the Database
+ * Message is a lightweight package that helps you to handle with Alerts of your system.
  */
 class Message
 {
