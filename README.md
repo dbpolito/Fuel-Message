@@ -30,5 +30,8 @@ Message is a lightweight package that helps you to handle with Alerts of your sy
 	// Get Success Messages
 	Message::get('success');
 
+## License
+
+This is released under the MIT License.
 
 ### More Docs comming soon
