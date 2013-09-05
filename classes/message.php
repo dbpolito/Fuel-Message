@@ -28,6 +28,15 @@ class Message
 	);
 
 	/**
+	 * Allowed Class for Bootstrap
+	 *
+	 * e.g. fade in -> <div class="alert alert-error fade in">
+	 *
+	 * @var array
+	 */
+	protected static $allowed_classe = '';
+
+	/**
 	 * All Messages will be stored on runtime
 	 *
 	 * @var array
@@ -45,6 +54,7 @@ class Message
 
 		static::$prefix = \Config::get('message.prefix', static::$prefix);
 		static::$allowed_types = \Config::get('message.allowed_types', static::$allowed_types);
+		static::$allowed_classe = \Config::get('message.allowed_classe', static::$allowed_classe);
 	}
 
 	/**
@@ -64,7 +74,7 @@ class Message
 				continue;
 			}
 
-			$output .= \View::forge($type, array('messages' => static::get_flash($type)), false);
+			$output .= \View::forge($type, array('messages' => static::get_flash($type), 'classe' => static::$allowed_classe), false);
 		}
 
 		return $output;
