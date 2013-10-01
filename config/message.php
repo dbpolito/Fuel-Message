@@ -15,5 +15,14 @@ return array(
 		'info',
 		'warning',
 		'error',
-	)
+		'danger',
+	),
+
+	/**
+	 * Add css class for Messages
+	 *
+	 * e.g. 'fade in' -> <div class="alert alert-error fade in">
+	 */
+	'allowed_classe' => 'fade in',
+	
 );
